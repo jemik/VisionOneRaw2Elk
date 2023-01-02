@@ -114,7 +114,7 @@ def ListPackages(id):
     #query_params = {'top': '50'}
     query_params = {"startDateTime": start.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "endDateTime": end.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "top": 10}
+        "top": 50}
     print(query_params)
     headers = {'Authorization': 'Bearer ' + token}
     r = requests.get(url_base + url_path, params=query_params, headers=headers)
